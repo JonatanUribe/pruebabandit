@@ -6,5 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ass\\XmlSecurity' => array($vendorDir . '/ass/xmlsecurity/src'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
+    'BeSimple\\SoapCommon' => array($vendorDir . '/besimple/soap-common'),
+    'BeSimple\\SoapClient' => array($vendorDir . '/besimple/soap-client'),
 );
