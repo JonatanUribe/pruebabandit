@@ -3,18 +3,25 @@ namespace JonatanUribe\pruebabandit;
 
 class Session
 {
-	public $sesion = "";
+	public $session = "";
 	
 	public function __construct() 
 	{
 		
 	}
 	
-	public getSesion()
+	public function setSession($key, $value)
 	{
-		return $this->sesion;
+		if(!isset($this->session[$key])) 
+		{
+		    $this->session[$key] = $value;
+		}
+	}
+	
+	public function getSession()
+	{
+		return $this->session;
 	}
 }
 
 ?>
-
