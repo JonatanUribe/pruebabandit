@@ -1,7 +1,7 @@
 {
     "name": "JonatanUribe/pruebabandit",
     "type": "library",
-    "description": ":package_description",
+    "description": "JonatanUribe/pruebabandit",
     "keywords": [
         "JonatanUribe",
         "pruebabandit"
@@ -10,7 +10,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": ":jonatanUribe",
+            "name": "JonatanUribe",
             "email": "jonug84@gmail.com",
             "homepage": "https://github.com/JonatanUribe/pruebabandit",
             "role": "Developer"
