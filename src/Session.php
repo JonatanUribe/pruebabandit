@@ -5,22 +5,38 @@ class Session
 {
 	public $session = "";
 	
-	public function __construct() 
+	public function __construct($key = '', $value = '') 
 	{
-		
+		if($key != '' && $value != '') {
+			$this->setSession($key, $value);
+		}
 	}
 	
 	public function setSession($key, $value)
 	{
 		if(!isset($this->session[$key])) 
 		{
-		    $this->session[$key] = $value;
+		    if (session_status() == PHP_SESSION_NONE) {
+				session_start();
+			}
+			$_SESSION[$key] = $value;
+			$this->session = $_SESSION;
 		}
 	}
 	
-	public function getSession()
+	public function getSession($key)
 	{
-		return $this->session;
+		if (session_status() == PHP_SESSION_NONE) {
+			session_start();
+		}
+		if(isset($this->session[$key]))
+		{
+			return $this->session[$key];
+		}
+		else
+		{
+			return '';
+		}
 	}
 }
 

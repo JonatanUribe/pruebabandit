@@ -11,9 +11,21 @@ class Form
 	{
 		$client = new Client();
 		$banks = $client->getListBanks();
-		print_r($banks);
+		//echo " kkkkkkkkk ";
+		//print_r($banks);
+		$selectListBanks = "<select name='bank'>";
+		foreach ($banks->getBankListResult->item as $bank) {
+			if(trim($bank->bankName) != '')
+			{
+				$selectListBanks .= "<option value='{$bank->bankCode}'>{$bank->bankName}</option>";
+			}
+        }
+		$selectListBanks .= "</select>";
 	    $this->form .= "
 		    <form method='POST' action='https://sandbox.gateway.payulatam.com/ppp-web-gateway/' name='frmData'>
+			<div>
+			{$selectListBanks}
+			</div>
 			<div>
 			<label for='txtTipoDoc'>Tipo Documento</label>
 			<select name='documentType'>
