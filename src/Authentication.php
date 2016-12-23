@@ -16,51 +16,37 @@ class Authentication
             $this->additional = $additional;
 		}
     }
-    /**
-     * @return mixed
-     */
+    
     public function getLogin()
     {
         return $this->login;
     }
-    /**
-     * @param mixed $login
-     */
+    
     public function setLogin($login)
     {
         $this->login = $login;
     }
-    /**
-     * @return mixed
-     */
+    
     public function getTranKey()
     {
         return $this->tranKey;
     }
-    /**
-     * @param mixed $tranKey
-     */
+    
     public function setTranKey($tranKey)
     {
         $this->tranKey = $tranKey;
     }
-    /**
-     * @return mixed
-     */
+    
     public function getAdditional()
     {
         return $this->additional;
     }
-    /**
-     * @param mixed $additional
-     */
+    
     public function setAdditional($additional)
     {
         $this->additional = $additional;
     }
-    /**
-     * @return string
-     */
+    
     private function generateHashKey($tranKey)
     {
         return sha1($this->seed . $tranKey, false);

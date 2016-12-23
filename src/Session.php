@@ -29,6 +29,14 @@ class Session
 		if (session_status() == PHP_SESSION_NONE) {
 			session_start();
 		}
+		if(isset($_SESSION[$key]))
+		{
+			$this->session[$key] = $_SESSION[$key];
+		}
+		else 
+		{
+			$this->session[$key] = '';
+		}
 		if(isset($this->session[$key]))
 		{
 			return $this->session[$key];
