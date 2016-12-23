@@ -3,101 +3,99 @@ namespace JonatanUribe\pruebabandit;
 
 class TransactionInformation
 {
-	var $transactionID;
-    var $sessionID;
-    var $reference;
-    var $requestDate;
-    var $bankProcessDate;
-    var $onTest;
-    var $returnCode;
-    var $trazabilityCode;
-    var $transactionCycle;
-    var $transactionState;
-    var $responseCode;
-    var $responseReasonCode;
-    var $responseReasonText;
-	
-	public function __construct($transactionID, $sessionID, $reference, $requestDate, $bankProcessDate, $onTest, $returnCode, $trazabilityCode, $transactionCycle, $transactionState, $responseCode, $responseReasonCode, $responseReasonText) 
-	{
-		$this->transactionID = $transactionID;
-		$this->sessionID = $sessionID;
-		$this->reference = $reference;
-		$this->requestDate = $requestDate;
-		$this->bankProcessDate = $bankProcessDate;
-		$this->onTest = $onTest;
-		$this->returnCode = $returnCode;
-		$this->trazabilityCode = $trazabilityCode;
-		$this->transactionCycle = $transactionCycle;
-		$this->transactionState = $transactionState;
-		$this->responseCode = $responseCode;
-		$this->responseReasonCode = $responseReasonCode;
-		$this->responseReasonText = $responseReasonText;
-	}
-	
-	public function getTransactionID()
+    public $transactionID;
+    public $sessionID;
+    public $reference;
+    public $requestDate;
+    public $bankProcessDate;
+    public $onTest;
+    public $returnCode;
+    public $trazabilityCode;
+    public $transactionCycle;
+    public $transactionState;
+    public $responseCode;
+    public $responseReasonCode;
+    public $responseReasonText;
+    
+    public function __construct($transactionID, $sessionID, $reference, $requestDate, $bankProcessDate, $onTest, $returnCode, $trazabilityCode, $transactionCycle, $transactionState, $responseCode, $responseReasonCode, $responseReasonText)
+    {
+        $this->transactionID = $transactionID;
+        $this->sessionID = $sessionID;
+        $this->reference = $reference;
+        $this->requestDate = $requestDate;
+        $this->bankProcessDate = $bankProcessDate;
+        $this->onTest = $onTest;
+        $this->returnCode = $returnCode;
+        $this->trazabilityCode = $trazabilityCode;
+        $this->transactionCycle = $transactionCycle;
+        $this->transactionState = $transactionState;
+        $this->responseCode = $responseCode;
+        $this->responseReasonCode = $responseReasonCode;
+        $this->responseReasonText = $responseReasonText;
+    }
+    
+    public function getTransactionID()
     {
         return $this->transactionID;
     }
     
-	public function getSessionID()
+    public function getSessionID()
     {
         return $this->sessionID;
     }
     
-	public function getReference()
+    public function getReference()
     {
         return $this->reference;
     }
     
-	public function getRequestDate()
+    public function getRequestDate()
     {
         return $this->requestDate;
     }
     
-	public function getBankProcessDate()
+    public function getBankProcessDate()
     {
         return $this->bankProcessDate;
     }
     
-	public function getOnTest()
+    public function getOnTest()
     {
         return $this->onTest;
     }
     
-	public function getReturnCode()
+    public function getReturnCode()
     {
         return $this->returnCode;
     }
     
-	public function getTrazabilityCode()
+    public function getTrazabilityCode()
     {
         return $this->trazabilityCode;
     }
     
-	public function getTransactionCycle()
+    public function getTransactionCycle()
     {
         return $this->transactionCycle;
     }
     
-	public function getTransactionState()
+    public function getTransactionState()
     {
         return $this->transactionState;
     }
     
-	public function getResponseCode()
+    public function getResponseCode()
     {
         return $this->responseCode;
     }
     
-	public function getResponseReasonCode()
+    public function getResponseReasonCode()
     {
         return $this->responseReasonCode;
     }
     
-	public function getResponseReasonText()
+    public function getResponseReasonText()
     {
         return $this->responseReasonText;
     }
 }
-
-?>

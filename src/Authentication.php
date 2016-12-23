@@ -14,7 +14,7 @@ class Authentication
         $this->tranKey = $this->generateHashKey($tranKey);
         if ($additional) {
             $this->additional = $additional;
-		}
+        }
     }
     
     public function getLogin()
@@ -52,5 +52,3 @@ class Authentication
         return sha1($this->seed . $tranKey, false);
     }
 }
-
-?>

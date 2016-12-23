@@ -5,34 +5,34 @@ use JonatanUribe\pruebabandit\Session;
 
 class Person
 {
-	var $document = '';
-	var $documentType = ''; 
-	var $firstName = ''; 
-	var $lastName = ''; 
-	var $company = ''; 
-	var $emailAddress = ''; 
-	var $city = '';
-	var $province = '';
-	var $country = ''; 
-	var $phone = ''; 
-	var $mobile = '';
-	
-	public function __construct($document, $documentType, $firstName, $lastName, $company, $emailAddress, $city, $province, $country = 'CO', $phone, $mobile)
-	{
-		$this->document = $document;
-		$this->documentType = $documentType;
-		$this->firstName = $firstName;
-		$this->lastName = $lastName;
-		$this->company = $company;
-		$this->emailAddress = $emailAddress;
-		$this->city = $city;
-		$this->province = $province;
-		$this->country = $country;
-		$this->phone = $phone;
-		$this->mobile = $mobile;
-	}
-	
-	public function getDocument()
+    public $document = '';
+    public $documentType = '';
+    public $firstName = '';
+    public $lastName = '';
+    public $company = '';
+    public $emailAddress = '';
+    public $city = '';
+    public $province = '';
+    public $country = '';
+    public $phone = '';
+    public $mobile = '';
+    
+    public function __construct($document, $documentType, $firstName, $lastName, $company, $emailAddress, $city, $province, $country = 'CO', $phone, $mobile)
+    {
+        $this->document = $document;
+        $this->documentType = $documentType;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->company = $company;
+        $this->emailAddress = $emailAddress;
+        $this->city = $city;
+        $this->province = $province;
+        $this->country = $country;
+        $this->phone = $phone;
+        $this->mobile = $mobile;
+    }
+    
+    public function getDocument()
     {
         return $this->document;
     }
